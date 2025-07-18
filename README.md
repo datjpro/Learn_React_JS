@@ -1,93 +1,217 @@
-1
-Giới thiệu
-React JS là một thư viện JavaScript mã nguồn mở, được phát triển bởi Facebook để xây dựng giao diện người dùng (UI) hiện đại. Qua phần học này, bạn sẽ nắm được những kiến thức nền tảng về React, bao gồm cách tạo component, quản lý state, props, hooks và xây dựng ứng dụng web tương tác.
+# React.js Learning Guide
 
-Nội dung học
-Hiểu khái niệm về React và ứng dụng thực tế.
+## 📚 Giới thiệu
 
-Thiết lập môi trường phát triển: cài đặt Node.js, npm/yarn và Visual Studio Code.
+React.js là một thư viện JavaScript mã nguồn mở được phát triển bởi Facebook (Meta) để xây dựng giao diện người dùng (UI) hiện đại và tương tác. Với kiến trúc component-based và virtual DOM, React giúp phát triển ứng dụng web nhanh chóng, hiệu quả và dễ bảo trì.
 
-Tìm hiểu về JSX, Component, Props và State.
+### 🎯 Mục tiêu khóa học
 
-Làm việc với React Hooks như useState, useEffect.
+Sau khi hoàn thành khóa học này, bạn sẽ có thể:
 
-Xử lý sự kiện, render có điều kiện và render danh sách.
+- Hiểu rõ các khái niệm cốt lõi của React
+- Xây dựng các component tái sử dụng
+- Quản lý state và props hiệu quả
+- Sử dụng React Hooks một cách thành thạo
+- Phát triển ứng dụng web tương tác hoàn chỉnh
 
-Cấu trúc dự án, tổ chức file/folder hợp lý.
+## 🛠️ Cài đặt môi trường
 
-Triển khai một số dự án thực hành cơ bản (Todo App, Blog, Portfolio…).
+### Yêu cầu hệ thống
 
-Cài đặt môi trường
-Yêu cầu:
+- **Node.js**: >= 14.x
+- **npm**: >= 6.x hoặc **Yarn**: >= 1.x
+- **Editor**: Visual Studio Code (khuyên dùng)
 
-Node.js >= 14.x
+### Các bước cài đặt
 
-npm >= 6.x hoặc Yarn >= 1.x
+1. **Kiểm tra Node.js và npm**:
 
-Visual Studio Code (khuyên dùng)
+   ```bash
+   node -v
+   npm -v
+   ```
 
-Các bước cài đặt:
+2. **Tạo project React mới**:
 
-Kiểm tra Node.js và npm:
+   ```bash
+   npx create-react-app ten-du-an
+   cd ten-du-an
+   npm start
+   ```
 
-bash
-node -v
-npm -v
-Cài đặt Create React App:
+3. **Truy cập ứng dụng**:
+   Mở trình duyệt và truy cập `http://localhost:3000`
 
-bash
-npm install -g create-react-app
-Tạo project mới:
+### Cấu trúc thư mục
 
-bash
-npx create-react-app ten-du-an
-cd ten-du-an
+```
+my-react-app/
+├── node_modules/          # Các thư viện dependencies
+├── public/                # Tài nguyên tĩnh
+│   ├── index.html        # File HTML gốc
+│   └── favicon.ico       # Icon trang web
+├── src/                   # Mã nguồn chính
+│   ├── components/       # Thư mục chứa components
+│   ├── App.js           # Component chính
+│   ├── App.css          # Styles cho App
+│   └── index.js         # Entry point
+├── package.json          # Cấu hình project
+└── README.md            # Tài liệu hướng dẫn
+```
+
+## 📖 Nội dung học
+
+### Module 1: Cơ bản về React
+
+- [ ] Giới thiệu React và Virtual DOM
+- [ ] JSX - JavaScript XML
+- [ ] Components và Props
+- [ ] State và lifecycle methods
+
+### Module 2: React Hooks
+
+- [ ] useState - Quản lý state
+- [ ] useEffect - Xử lý side effects
+- [ ] useContext - Quản lý context
+- [ ] Custom Hooks
+
+### Module 3: Xử lý sự kiện và render
+
+- [ ] Event handling trong React
+- [ ] Conditional rendering
+- [ ] Lists và Keys
+- [ ] Forms và controlled components
+
+### Module 4: Quản lý state nâng cao
+
+- [ ] State lifting và prop drilling
+- [ ] Context API
+- [ ] useReducer hook
+- [ ] State management patterns
+
+### Module 5: Styling và UI
+
+- [ ] CSS modules
+- [ ] Styled-components
+- [ ] UI component libraries
+- [ ] Responsive design
+
+## 🚀 Các lệnh thường dùng
+
+```bash
+# Chạy ứng dụng ở chế độ development
 npm start
-Ứng dụng sẽ chạy tại http://localhost:3000.
 
-Cấu trúc thư mục mẫu
-text
-my-app/
-├── node_modules/
-├── public/
-│ ├── index.html
-├── src/
-│ ├── App.js
-│ └── ...
-├── package.json
-└── README.md
-src/App.js: Component chính của ứng dụng.
-
-public/index.html: File HTML gốc của app.
-
-Hướng dẫn sử dụng
-Chạy ứng dụng:
-
-bash
-npm start
-Build production:
-
-bash
+# Build ứng dụng cho production
 npm run build
-Tài liệu khuyến nghị
-React - Bắt đầu chính thức
 
-[Học ReactJS cơ bản đến nâng cao - ITviec]
+# Chạy test
+npm test
 
-[Lộ trình học ReactJS cho người mới - GitHub Gist]
+# Eject cấu hình (không khuyên dùng)
+npm run eject
+```
 
-Góp ý & Hỗ trợ
-Nếu gặp vấn đề hoặc cần hỗ trợ, hãy liên hệ qua email của bạn, hoặc tạo tícket trên hệ thống quản lý dự án.
+## 🏗️ Dự án thực hành
 
-Gợi ý cấu trúc nội dung README:
-Giới thiệu tổng quan React & mục tiêu khóa học
+### Dự án cơ bản
 
-Các link tài liệu tham khảo hữu ích
+1. **Todo App** - Quản lý danh sách công việc
+2. **Weather App** - Ứng dụng thời tiết
+3. **Calculator** - Máy tính đơn giản
 
-Hướng dẫn khởi tạo và chạy dự án
+### Dự án nâng cao
 
-Hướng dẫn học từng chủ đề/phần
+1. **Blog Personal** - Blog cá nhân với CRUD
+2. **E-commerce** - Trang thương mại điện tử
+3. **Portfolio Website** - Trang web portfolio
 
-Liệt kê các dự án thực hành giúp nắm chắc kiến thức
+## 📚 Tài liệu tham khảo
 
-Thông tin liên hệ khi cần hỗ trợ
+### Tài liệu chính thức
+
+- [React Documentation](https://reactjs.org/docs/getting-started.html)
+- [Create React App](https://create-react-app.dev/)
+- [React Tutorial](https://reactjs.org/tutorial/tutorial.html)
+
+### Tài liệu bổ sung
+
+- [React Hooks Documentation](https://reactjs.org/docs/hooks-intro.html)
+- [React Router](https://reactrouter.com/)
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+
+### Video và khóa học
+
+- [React Crash Course - Traversy Media](https://www.youtube.com/watch?v=w7ejDZ8SWv8)
+- [Full Stack React - ITviec](https://itviec.com/blog/react-tutorial/)
+- [React Developer Roadmap](https://roadmap.sh/react)
+
+## 🔧 Extensions VS Code khuyên dùng
+
+```json
+{
+  "recommendations": [
+    "ms-vscode.vscode-typescript-next",
+    "bradlc.vscode-tailwindcss",
+    "esbenp.prettier-vscode",
+    "ms-vscode.vscode-json",
+    "formulahendry.auto-rename-tag",
+    "christian-kohler.path-intellisense"
+  ]
+}
+```
+
+## 🤝 Góp ý & Hỗ trợ
+
+### Khi gặp vấn đề
+
+1. Kiểm tra console để xem lỗi
+2. Tham khảo documentation chính thức
+3. Tìm kiếm trên Stack Overflow
+4. Tham gia cộng đồng React Vietnam
+
+### Liên hệ hỗ trợ
+
+- 📧 Email: [your-email@example.com]
+- 💬 Discord: [React Learning Community]
+- 🐛 Issues: [GitHub Issues]
+- 📋 Project Management: [Trello/Jira Board]
+
+## 📈 Lộ trình học tập
+
+### Tuần 1-2: Cơ bản
+
+- Cài đặt môi trường
+- Tìm hiểu JSX và Components
+- Thực hành với props và state
+
+### Tuần 3-4: Hooks và State Management
+
+- Học các hooks cơ bản
+- Thực hành với useEffect
+- Xây dựng Todo App
+
+### Tuần 5-6: Routing và Forms
+
+- React Router
+- Form handling
+- Validation
+
+### Tuần 7-8: Dự án thực tế
+
+- Xây dựng dự án hoàn chỉnh
+- Deploy ứng dụng
+- Code review và tối ưu
+
+## 🏆 Chứng chỉ và đánh giá
+
+- [ ] Hoàn thành tất cả bài tập
+- [ ] Xây dựng ít nhất 2 dự án thực hành
+- [ ] Tham gia code review
+- [ ] Thực hiện bài kiểm tra cuối khóa
+
+---
+
+**Happy coding! 🚀**
+
+> "The best way to learn React is by building real projects. Start small, think big, and never stop learning!"
