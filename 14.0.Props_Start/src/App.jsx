@@ -1,40 +1,6 @@
-import logo from "./assets/logo-tuhoc.png";
-import PropTypes from "prop-types";
-
+import Header from "./components/Header/Header.jsx";
 import { myData } from "../data.js";
-
-function MainContent({ img, title, desc }) {
-  return (
-    <>
-      <li>
-        <img src={img} alt={title} />
-        <h2>{title}</h2>
-        <p>{desc}</p>
-      </li>
-    </>
-  );
-}
-
-MainContent.propTypes = {
-  img: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  desc: PropTypes.string.isRequired,
-};
-
-function Header() {
-  return (
-    <>
-      <header>
-        <img src={logo} alt="Tự Học" />
-        <h1>React JS SIU</h1>
-        <p>
-          Học React - Khám phá cách xây dựng ứng dụng linh hoạt, hiện đại, và
-          đầy sáng tạo!
-        </p>
-      </header>
-    </>
-  );
-}
+import MainContent from "./components/MainContent/MainContent.jsx";
 
 function App() {
   // console.log(myData[0].img);
