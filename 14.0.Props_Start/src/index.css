@@ -19,15 +19,7 @@ html {
   min-height: 80rem;
 }
 
-header {
-  text-align: center;
-  margin: 3rem 0;
-}
 
-header img {
-  width: 20rem;
-  object-fit: cover;
-}
 
 header h1 {
   margin: 0;

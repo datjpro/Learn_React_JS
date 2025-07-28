@@ -1,0 +1,9 @@
+header {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+header img {
+  width: 20rem;
+  object-fit: cover;
+}
