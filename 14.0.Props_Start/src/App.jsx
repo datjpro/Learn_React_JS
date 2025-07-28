@@ -4,6 +4,15 @@ import MainContent from "./components/MainContent/MainContent.jsx";
 import TabButton from "./components/TabButton.jsx";
 function App() {
   // console.log(myData[0].img);
+  function handleSelect(selectButton) {
+    alert(`${selectButton} được chọn`);
+  }
+
+  // function createHandler(buttonName) {
+  //   return function () {
+  //     handleSelect(buttonName);
+  //   };
+  // }
 
   return (
     <>
@@ -25,13 +34,18 @@ function App() {
         </section>
         <section id="examples">
           <h2>Examples</h2>
+          {/* prettier-ignore */}
           <menu>
-            <TabButton>Components</TabButton>
-            <TabButton>JSX</TabButton>
-            <TabButton>Props</TabButton>
-            <TabButton>State</TabButton>
-            {/* <TabButton abc="Components"></TabButton> */}
+            <TabButton onSelect={()=>{handleSelect(`components`);}}>Components</TabButton>
+            <TabButton onSelect={()=>{handleSelect(`jsx`);}}>JSX</TabButton>
+            <TabButton onSelect={()=>{handleSelect(`props`);}}>Props</TabButton>
+            <TabButton onSelect={()=>{handleSelect(`state`);}}>State</TabButton>      
+            {/* <TabButton onSelect={createHandler('Components')}>Components</TabButton>
+            <TabButton onSelect={createHandler('JSX')}>JSX</TabButton>
+            <TabButton onSelect={createHandler('Props')}>Props</TabButton>
+            <TabButton onSelect={createHandler('State')}>State</TabButton>  */}
           </menu>
+          Some content
         </section>
       </main>
     </>
