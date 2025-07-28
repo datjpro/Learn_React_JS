@@ -1,7 +1,7 @@
 import Header from "./components/Header/Header.jsx";
 import { myData } from "../data.js";
 import MainContent from "./components/MainContent/MainContent.jsx";
-
+import TabButton from "./components/TabButton.jsx";
 function App() {
   // console.log(myData[0].img);
 
@@ -22,6 +22,16 @@ function App() {
             <MainContent {...myData[2]} />
             <MainContent {...myData[3]} />
           </ul>
+        </section>
+        <section id="examples">
+          <h2>Examples</h2>
+          <menu>
+            <TabButton>Components</TabButton>
+            <TabButton>JSX</TabButton>
+            <TabButton>Props</TabButton>
+            <TabButton>State</TabButton>
+            {/* <TabButton abc="Components"></TabButton> */}
+          </menu>
         </section>
       </main>
     </>
