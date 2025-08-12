@@ -5,6 +5,9 @@ import { myData, EXAMPLES } from "../data.js";
 import MainContent from "./components/MainContent/MainContent.jsx";
 import TabButton from "./components/TabButton.jsx";
 function App() {
+  const kq = myData.map((item) => ({ ...item }));
+  console.log(kq);
+
   useState();
   console.log("app dc gọi");
   const [selectedTopic, setSelectedTopic] = useState(); //update state
@@ -35,15 +38,13 @@ function App() {
         <section id="core-concepts">
           <h2>Khái niệm chính trong React</h2>
           <ul>
-            <MainContent {...myData[0]} />
-            {/* <MainContent
-              img={myData[1].img}
-              titel={myData[1].title}
-              desc={myData[1].desc}
-            /> */}
+            {/* <MainContent {...myData[0]} />
             <MainContent {...myData[1]} />
             <MainContent {...myData[2]} />
-            <MainContent {...myData[3]} />
+            <MainContent {...myData[3]} /> */}
+            {myData.map((item) => (
+              <MainContent key={item.title} {...item} />
+            ))}
           </ul>
         </section>
         <section id="examples">
