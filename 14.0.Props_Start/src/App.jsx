@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import Section from "./components/MainContent/Section.jsx";
 import Header from "./components/Header/Header.jsx";
 import { myData, EXAMPLES } from "../data.js";
 import MainContent from "./components/MainContent/MainContent.jsx";
@@ -47,8 +47,7 @@ function App() {
             ))}
           </ul>
         </section>
-        <section id="examples">
-          <h2>Examples</h2>
+        <Section title="Examples" id="examples" classname="demo class">
           {/* prettier-ignore */}
           <menu>
             <TabButton 
@@ -80,7 +79,7 @@ function App() {
           )}
 
           {selectedTopic}
-        </section>
+        </Section>
       </main>
     </>
   );
